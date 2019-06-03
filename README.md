@@ -3,17 +3,16 @@ Simple Really Customizable Calendar
 
 ## Getting Started
 ### Prerequisites
-This library requires:
-```
-<a href="https://jquery.com/">jquery/<a/>
-<a href="https://momentjs.com">moment.js</a>
-```
+This library requires <a href="https://jquery.com/">jquery<a/> and <a href="https://momentjs.com">moment.js</a>
 
+### Installation
 The installation is pretty strait forward just import the calendalha.js into your code and call the function calendalha passing your div id.
-```
+```html
 <!-- This example includes a optional css file with the default style  -->
 <link rel="stylesheet" href="/path/to/calendalha.css"/>
+
 <div class="calendalha"></div>
+
 <script src="/path/to/calendalha.js"></script>
 <script>
   $(document).ready(function(){
@@ -21,3 +20,141 @@ The installation is pretty strait forward just import the calendalha.js into you
   })
 </script>
 ```
+
+## Options
+
+### textAlign (string)
+Position of the days in the calendar {center,left,right}
+ 
+***Example:***
+```js
+calendalha('.calendalha',{
+  textAlign:'center'
+})
+```
+### onDayClick (function)
+Function called when user clicks in a day cell
+ 
+***Example:***
+```js
+calendalha('.calendalha',{
+  textAlign:'center'
+})
+```
+
+### onMonthChange (function)
+Function called when user changes month
+ 
+***Example:***
+```js
+calendalha('.calendalha',{
+  textAlign:'center'
+})
+```
+
+### locale (string)
+Localizations of calendar based in moment locale, imports from project if already set
+ 
+***Example:***
+```js
+calendalha('.calendalha',{
+  textAlign:'center'
+})
+```
+
+### initDate (string)
+Initial date of the calendar "YYYY-MM-DD"
+ 
+***Example:***
+```js
+calendalha('.calendalha',{
+  textAlign:'center'
+})
+```
+
+### markedDates (array)
+Marcked dates of the calendar (marked dates receive "marked" class)
+ 
+***Example:***
+```js
+calendalha('.calendalha',{
+  textAlign:'center'
+})
+```
+
+### initDayActive (boolean)
+initDate receives active status (class "active")
+ 
+***Example:***
+```js
+calendalha('.calendalha',{
+  initDayActive:true
+})
+```
+
+### renderCustomDay (function)
+Function to create a custom html of the table cell
+ 
+***Example:***
+```js
+calendalha('.calendalha',{
+  renderCustomDay:function(item,date){
+    console.log(date) // moment object with item date
+    console.log(item)    // day number string
+    return `<i>${item}</i>`
+  }
+})
+```
+
+### celVAlign (string)
+Vertical aligment of the content inside the table cell
+ 
+***Example:***
+```js
+calendalha('.calendalha',{
+  celVAlign:'top'
+})
+```
+
+### custLeftArrow (string)
+Custom html to the left arrow
+ 
+***Example:***
+```js
+calendalha('.calendalha',{
+  custLeftArrow:'←'
+})
+```
+
+### custRightArrow (string)
+Custom html to the right arrow
+ 
+***Example:***
+```js
+calendalha('.calendalha',{
+  custRightArrow:'→'
+})
+```
+
+### weekFormat (string)
+Week day name display format, based in moment.js format
+ 
+***Example:***
+```js
+calendalha('.calendalha',{
+  weekFormat:'ddd'
+})
+```
+
+### monthFormat (string)
+Month name display format, based in moment.js format
+ 
+***Example:***
+```js
+calendalha('.calendalha',{
+  monthFormat:'MMM'
+})
+```
+
+## License
+This project is licensed under the <a href="https://opensource.org/licenses/MIT">MIT</a> License

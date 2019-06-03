@@ -1,0 +1,50 @@
+.calendalha  {
+  width: 100%;
+  background: #ccc;
+  padding: 10px;
+}
+
+.calendalha-control{
+  display:flex;
+  justify-content: space-between;
+  font-size: 22px;
+}
+
+.calendalha  thead th{
+  text-align: center;
+  font-size: 80%;
+}
+.calendalha  thead th{
+  background:#b3b3b3;
+  border:3px solid #ccc;
+  border-radius: 15px;
+  margin: 0 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.calendalha  thead th:nth-child(1){
+  background:#ff6600;
+  color:white;
+}
+.calendalha  thead th:nth-child(7){
+  background:#ff6600;
+  color:white;
+}
+/* table tr {
+
+} */
+.calendalha  tbody td {
+  width: 14.28571428571429%;
+  border: 2px solid #ccc;
+  padding: 3px;
+  border-radius: 8px;
+  background: white;
+  color:black;
+}
+.calendalha tbody td[disabled] {
+  background: transparent;
+  border: none;
+}
+.calendalha .currentDay {
+  font-weight: bold;
+}

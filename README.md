@@ -21,6 +21,7 @@ The installation is pretty strait forward just import the calendalha.js into you
 </script>
 ```
 
+
 ## Options
 
 ### textAlign (string)
@@ -155,6 +156,12 @@ calendalha('.calendalha',{
   monthFormat:'MMM'
 })
 ```
+
+
+## Version
+### v1.0 (03-06-2019)
+* **Inicial** build
+
 
 ## License
 This project is licensed under the <a href="https://opensource.org/licenses/MIT">MIT</a> License

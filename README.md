@@ -39,7 +39,9 @@ Function called when user clicks in a day cell
 ***Example:***
 ```js
 calendalha('.calendalha',{
-  textAlign:'center'
+  onDayClick:function(date){
+    console.log(date);
+  }
 })
 ```
 
@@ -49,7 +51,9 @@ Function called when user changes month
 ***Example:***
 ```js
 calendalha('.calendalha',{
-  textAlign:'center'
+  onMonthChange:function(month,year){
+    alert("Month:"+month+" Year: "+year)
+  }
 })
 ```
 
@@ -59,7 +63,7 @@ Localizations of calendar based in moment locale, imports from project if alread
 ***Example:***
 ```js
 calendalha('.calendalha',{
-  textAlign:'center'
+  locale:'pt-br'
 })
 ```
 
@@ -69,7 +73,7 @@ Initial date of the calendar "YYYY-MM-DD"
 ***Example:***
 ```js
 calendalha('.calendalha',{
-  textAlign:'center'
+  initDate:'2019-05-01'
 })
 ```
 
@@ -79,7 +83,7 @@ Marcked dates of the calendar (marked dates receive "marked" class)
 ***Example:***
 ```js
 calendalha('.calendalha',{
-  textAlign:'center'
+  markedDates:["2019-05-23","2019-04-22",2017-12-08]
 })
 ```
 

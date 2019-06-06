@@ -13,8 +13,14 @@ The installation is pretty strait forward just import the calendalha.js into you
 <!-- This example includes a optional css file with the default style  -->
 <link rel="stylesheet" href="/path/to/calendalha.css"/>
 
+<!-- div where calendar will render -->
 <div class="calendalha"></div>
 
+<!-- Jquery and Moment.js are required -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+
+<!-- Calendalha script -->
 <script src="/path/to/calendalha.js"></script>
 <script>
   $(document).ready(function(){

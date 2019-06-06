@@ -1,6 +1,8 @@
 # Calendalha <img alt="@lucashe1997" class="avatar" src="https://avatars3.githubusercontent.com/u/13800300?s=40&amp;v=4" height="20" width="20">
 Simple Really Customizable Calendar
 
+<img src="https://github.com/lucashe1997/calendalha/blob/master/images/shot1.png?raw=true"/>
+
 ## Getting Started
 ### Prerequisites
 This library requires <a href="https://jquery.com/">jquery<a/> and <a href="https://momentjs.com">moment.js</a>

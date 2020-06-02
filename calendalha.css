@@ -1,4 +1,4 @@
-.calendalha  {
+.calendalha-body  {
   width: 100%;
   background: #ccc;
   padding: 10px;
@@ -10,11 +10,11 @@
   font-size: 22px;
 }
 
-.calendalha  thead th{
+.calendalha-body  thead th{
   text-align: center;
   font-size: 80%;
 }
-.calendalha  thead th{
+.calendalha-body  thead th{
   background:#b3b3b3;
   border:3px solid #ccc;
   border-radius: 15px;
@@ -22,18 +22,18 @@
   text-transform: uppercase;
   text-align: center;
 }
-.calendalha  thead th:nth-child(1){
+.calendalha-body  thead th:nth-child(1){
   background:#ff6600;
   color:white;
 }
-.calendalha  thead th:nth-child(7){
+.calendalha-body  thead th:nth-child(7){
   background:#ff6600;
   color:white;
 }
 /* table tr {
 
 } */
-.calendalha  tbody td {
+.calendalha-body  tbody td {
   width: 14.28571428571429%;
   border: 2px solid #ccc;
   padding: 3px;
@@ -41,10 +41,14 @@
   background: white;
   color:black;
 }
-.calendalha tbody td[disabled] {
+.calendalha-body  tbody td.active {
+  background:#ff6600;
+  color: #fff;
+}
+.calendalha-body tbody td[disabled] {
   background: transparent;
   border: none;
 }
-.calendalha .currentDay {
+.calendalha-body .currentDay {
   font-weight: bold;
 }

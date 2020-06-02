@@ -15,7 +15,7 @@ function calendalha(target,options) {
     options.celVAlign			= options.celVAlign || 'top'; // vertical aligment of the content inside the table cell {'top','bottom','middle'}
     options.custLeftArrow		= options.custLeftArrow || '&lt;&lt;'; // custom html to the left arrow "<<"
 	options.custRightArrow		= options.custRightArrow || '&gt;&gt;'; // custom html to the right arrow ">>"
-	options.weekFormat			= options.weekFormat || "dddd"; // abbreviate week day name ex: Monday => Mon
+	options.weekFormat			= options.weekFormat || "ddd"; // abbreviate week day name ex: Monday => Mon
 	options.monthFormat			= options.monthFormat || "MMMM" // month string format based in moment format
     
 	currentDay		=	moment().format('DD');   // Today's day.
@@ -38,7 +38,7 @@ function calendalha(target,options) {
 		function appendMarkup() {
             // String to append
             var str = `<div class="calendalha-control" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; "><span class="prev">${options.custLeftArrow}</span><div><span class="month"></span>&nbsp;<span class="year"></span></div><span class="next">${options.custRightArrow}</span></caption></div>`
-			str += `<table class="calendalha" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; text-align:${options.textAlign}"><thead><tr></tr></thead><tbody></tbody></table>`;
+			str += `<table class="calendalha-body" style="-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; text-align:${options.textAlign}"><thead><tr></tr></thead><tbody></tbody></table>`;
 			// Append mockup
             $(target).append(str);
         }

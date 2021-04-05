@@ -7,20 +7,31 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="./calendalha.css"/>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+        body {
+            background-color: #333333;
+        }
+        .row {
+            background: white;
+            margin-bottom: 20px;
+            padding: 1rem;
+        }
+    </style>
+
     <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/locale/pt-br.js"></script>
 </head>
 <body>
     <div class="container">
 
         <div class="row">
-            <div class="col">
+            <div class="col-md-6 col-sm-12">
                 <h2>Static Calendar</h2>
             </div>
-            <div class="col">
+            <div class="col-md-6 col-sm-12">
                 <div class="calendalha-1"></div>
                 <script>
-                    $(document).ready(function(){
+                    document.addEventListener('DOMContentLoaded', function() {
                         calendalha('.calendalha-1') 
                     })
                 </script>
@@ -28,16 +39,17 @@
         </div>
 
         <div class="row">
-            <div class="col">
+            <div class="col-md-6 col-sm-12">
                 <h2>onDayClick event</h2>
                 <pre id="calendalha-2"></pre>
             </div>
-            <div class="col">
+            <div class="col-md-6 col-sm-12">
                 <div class="calendalha-2"></div>
                 <script>
-                    $(document).ready(function(){
+                    document.addEventListener('DOMContentLoaded', function() {
                         calendalha('.calendalha-2',{
-                            onDayClick: (date)=> $('#calendalha-2').html(date)
+                            selectDayOnClick: true,
+                            onDayClick: (date)=> document.querySelector('#calendalha-2').innerHTML = date,
                         })
                     })
                 </script>
@@ -45,39 +57,21 @@
         </div>
 
         <div class="row">
-            <div class="col">
+            <div class="col-md-6 col-sm-12">
                 <h2>onMonthChange event</h2>
                 <pre id="calendalha-3"></pre>
             </div>
-            <div class="col">
+            <div class="col-md-6 col-sm-12">
                 <div class="calendalha-3"></div>
                 <script>
-                    $(document).ready(function(){
+                    document.addEventListener('DOMContentLoaded', function() {
                         calendalha('.calendalha-3',{
-                            onMonthChange: (month,year)=> $('#calendalha-3').html(`Month: ${month}<br>Year: ${year}`)
+                            onMonthChange: (month,year)=> document.querySelector('#calendalha-3').innerHTML = `Month: ${month}<br>Year: ${year}`,
                         })
                     })
                 </script>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col">
-                <h2>Calendar Locale</h2>
-                <pre id="calendalha-4">locale:'pt-br'</pre>
-            </div>
-            <div class="col">
-                <div class="calendalha-4"></div>
-                <script>
-                    $(document).ready(function(){
-                        calendalha('.calendalha-4',{
-                            locale:'pt-br'
-                        })
-                    })
-                </script>
-            </div>
-        </div>
-
     </div>
 
     <script src="./calendalha.js"></script>

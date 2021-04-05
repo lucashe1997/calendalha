@@ -5,7 +5,7 @@ Simple Really Customizable Calendar
 
 ## Getting Started
 ### Prerequisites
-This library requires <a href="https://jquery.com/">jquery<a/> and <a href="https://momentjs.com">moment.js</a>
+This library requires <a href="https://momentjs.com">moment.js</a>
 
 ### Installation
 The installation is pretty strait forward just import the calendalha.js into your code and call the function calendalha passing your div id.
@@ -16,8 +16,7 @@ The installation is pretty strait forward just import the calendalha.js into you
 <!-- div where calendar will render -->
 <div class="calendalha"></div>
 
-<!-- Jquery and Moment.js are required -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- Moment.js is required -->
 <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
 
 <!-- Calendalha script -->
